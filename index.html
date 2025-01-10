@@ -81,6 +81,22 @@
     button:hover {
       background-color: #444;
     }
+
+    .link-button {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #000;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .link-button:hover {
+      background-color: #444;
+    }
   </style>
 </head>
 <body>
@@ -112,6 +128,9 @@
 
     <!-- Crop and Download Button -->
     <button id="downloadBtn">Download Cropped Image</button>
+
+    <!-- Link Button -->
+    <a href="https://drive.google.com/drive/folders/1DJzqBJKDaARcOU9hvPtKMXwpEmBWb-La?usp=sharing" class="link-button" target="_blank">Choose Your Photo</a>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
