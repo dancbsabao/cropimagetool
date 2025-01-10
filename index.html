@@ -104,6 +104,10 @@
     .link-button:hover {
       background-color: #444;
     }
+
+    #uploadLink {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -120,19 +124,8 @@
       5. Finally, upload the cropped photo to the Google Form provided.
     </p>
 
-    <!-- Name Input Fields -->
-    <div class="form-group">
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" placeholder="Enter Last Name">
-    </div>
-    <div class="form-group">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" placeholder="Enter First Name">
-    </div>
-    <div class="form-group">
-      <label for="middleInitial">Middle Initial</label>
-      <input type="text" id="middleInitial" placeholder="Enter Middle Initial">
-    </div>
+    <!-- Link to Choose Photo -->
+    <a href="https://drive.google.com/drive/folders/1DJzqBJKDaARcOU9hvPtKMXwpEmBWb-La?usp=sharing" class="link-button" target="_blank">Choose Your Photo</a>
 
     <!-- Upload Section -->
     <div class="form-group">
@@ -147,10 +140,9 @@
     <button id="downloadBtn">Download Cropped Image</button>
 
     <!-- Upload Cropped Image Button -->
-    <a href="https://drive.google.com/drive/folders/1xpN_yxrMUdKVQ7j9A06tGwEmKsNJ6B6L?usp=sharing" class="link-button" target="_blank">Upload Cropped Image</a>
-
-    <!-- Link to Choose Photo -->
-    <a href="https://drive.google.com/drive/folders/1DJzqBJKDaARcOU9hvPtKMXwpEmBWb-La?usp=sharing" class="link-button" target="_blank">Choose Your Photo</a>
+    <button onclick="document.getElementById('uploadLink').click();">Upload Cropped Image</button>
+    <!-- Hidden input element that triggers the file upload -->
+    <input type="file" id="uploadLink" accept="image/*" style="display:none;" onchange="alert('File Selected: ' + this.value)">
 
     <!-- Link to ARTA Request Form -->
     <a href="https://forms.gle/RkCMUeDmNG9ZAwh78" class="link-button" target="_blank">Go to ARTA Request Form</a>
