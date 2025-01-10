@@ -33,6 +33,13 @@
       margin-bottom: 20px;
     }
 
+    p.instructions {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
     .form-group {
       margin-bottom: 15px;
       display: flex;
@@ -103,19 +110,19 @@
   <div class="container">
     <h2>Upload and Crop Your Photo</h2>
 
-    <!-- Name Input Fields -->
-    <div class="form-group">
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" placeholder="Enter Last Name">
-    </div>
-    <div class="form-group">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" placeholder="Enter First Name">
-    </div>
-    <div class="form-group">
-      <label for="middleInitial">Middle Initial</label>
-      <input type="text" id="middleInitial" placeholder="Enter Middle Initial">
-    </div>
+    <!-- Instructions -->
+    <p class="instructions">
+      <strong>Instructions:</strong><br>
+      1. Choose a photo by clicking "choose photo" and download it.<br>
+      2. Upload the downloaded photo below.<br>
+      3. Crop the photo as needed using the crop tool.<br>
+      4. Download the cropped photo.<br>
+      5. Upload a cropped photo using the upload button.<br>
+      6. Finally, complete the Google Form provided.
+    </p>
+
+    <!-- Link to Choose Photo -->
+    <a href="https://drive.google.com/drive/folders/1DJzqBJKDaARcOU9hvPtKMXwpEmBWb-La?usp=sharing" class="link-button" target="_blank">Choose Your Photo</a>
 
     <!-- Upload Section -->
     <div class="form-group">
@@ -129,11 +136,8 @@
     <!-- Crop and Download Button -->
     <button id="downloadBtn">Download Cropped Image</button>
 
-    <!-- Choose Your Photo Button -->
-    <a href="https://drive.google.com/drive/folders/1DJzqBJKDaARcOU9hvPtKMXwpEmBWb-La?usp=sharing" class="link-button" target="_blank">Choose Your Photo</a>
-
-    <!-- Upload Cropped Image to Google Drive Button -->
-    <a href="https://drive.google.com/drive/folders/1xpN_yxrMUdKVQ7j9A06tGwEmKsNJ6B6L?usp=sharing" class="link-button" target="_blank">Upload Cropped Image to Google Drive</a>
+    <!-- Upload Cropped Image Button -->
+    <a href="https://drive.google.com/drive/folders/1xpN_yxrMUdKVQ7j9A06tGwEmKsNJ6B6L?usp=sharing" class="link-button" target="_blank">Upload Cropped Image</a>
 
     <!-- Link to ARTA Request Form -->
     <a href="https://forms.gle/RkCMUeDmNG9ZAwh78" class="link-button" target="_blank">Go to ARTA Request Form</a>
