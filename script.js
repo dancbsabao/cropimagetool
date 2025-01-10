@@ -27,19 +27,6 @@ document.getElementById('uploadImage').addEventListener('change', function (e) {
   }
 });
 
-// Restrict inputs to uppercase and symbols
-function restrictUppercase(inputId) {
-  const inputElement = document.getElementById(inputId);
-  inputElement.addEventListener('input', function () {
-    inputElement.value = inputElement.value.toUpperCase().replace(/[^A-Z\s.,]/g, ''); // Allow uppercase and symbols only
-  });
-}
-
-// Apply input restrictions on form fields
-restrictUppercase('lastName');
-restrictUppercase('firstName');
-restrictUppercase('middleInitial');
-
 // Download cropped image
 document.getElementById('downloadBtn').addEventListener('click', function () {
   const lastName = document.getElementById('lastName').value.trim();
@@ -74,5 +61,7 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
       a.download = `${fullName}.jpg`; // Use the full name as the filename
       a.click();
     });
+  } else {
+    alert("Please upload and crop an image first.");
   }
 });
