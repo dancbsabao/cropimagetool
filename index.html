@@ -1,13 +1,3 @@
-
-Thank you for sharing your JavaScript! I understand that you want to implement the "Download Cropped Image" functionality based on this code. Here's an explanation of the logic and what it does:
-
-What It Does:
-It handles image upload, cropper initialization, and cropping.
-The "Download Cropped Image" button generates a download link based on the full name (last name, first name, and middle initial), which is dynamically created from the input fields.
-Here's how to integrate this into the HTML and make sure everything works smoothly:
-Updated HTML:
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,31 +120,29 @@ Copy code
       5. Finally, upload the cropped photo to the Google Form provided.
     </p>
 
-    <!-- Upload Image Input -->
+    <!-- Link to Choose Photo -->
+    <a href="https://drive.google.com/drive/folders/1DJzqBJKDaARcOU9hvPtKMXwpEmBWb-La?usp=sharing" class="link-button" target="_blank">Choose Your Photo</a>
+
+    <!-- Upload Section -->
     <div class="form-group">
       <label for="uploadImage">Upload Image</label>
       <input type="file" id="uploadImage" accept="image/*">
     </div>
 
-    <!-- Image Preview -->
-    <div id="preview">
-      <!-- Cropped image preview will go here -->
-    </div>
+    <!-- Preview Section -->
+    <div id="preview">Image preview will appear here</div>
 
-    <!-- Name Input Fields -->
-    <div class="form-group">
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" placeholder="Last Name">
-    </div>
-    <div class="form-group">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" placeholder="First Name">
-    </div>
-    <div class="form-group">
-      <label for="middleInitial">Middle Initial</label>
-      <input type="text" id="middleInitial" placeholder="Middle Initial">
-    </div>
-
-    <!-- Download Button -->
+    <!-- Crop and Download Button -->
     <button id="downloadBtn">Download Cropped Image</button>
+
+    <!-- Upload Cropped Image Button -->
+    <a href="https://drive.google.com/drive/folders/1xpN_yxrMUdKVQ7j9A06tGwEmKsNJ6B6L?usp=sharing" class="link-button" target="_blank">Upload Cropped Image</a>
+
+    <!-- Link to ARTA Request Form -->
+    <a href="https://forms.gle/RkCMUeDmNG9ZAwh78" class="link-button" target="_blank">Go to ARTA Request Form</a>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
