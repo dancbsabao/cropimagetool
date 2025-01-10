@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Your Image</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Upload and Crop Your Photo</h2>
+
+  <!-- Name Input Fields -->
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Enter Last Name">
+  </div>
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="Enter First Name">
+  </div>
+  <div>
+    <label for="middleInitial">Middle Initial:</label>
+    <input type="text" id="middleInitial" placeholder="Enter Middle Initial">
+  </div>
+
+  <br>
+
+  <!-- Upload Section -->
+  <input type="file" id="uploadImage" accept="image/*">
+  <br><br>
+
+  <!-- Preview and Cropping Section -->
+  <div id="preview"></div>
+  <br><br>
+
+  <!-- Crop and Download Button -->
+  <button id="downloadBtn">Download Cropped Image</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
