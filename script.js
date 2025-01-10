@@ -41,11 +41,9 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
 
   // Construct the full name in the correct format
   let fullName = `${lastName}, ${firstName} ${middleInitial}`;
-  
+
   // Ensure no extra dot after the middle initial
-  if (middleInitial.slice(-1) === '.') {
-    fullName = `${lastName}, ${firstName} ${middleInitial}`;
-  } else {
+  if (middleInitial.slice(-1) !== '.') {
     fullName = `${lastName}, ${firstName} ${middleInitial}.`;
   }
 
@@ -58,9 +56,9 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${fullName}.jpg`; // Use the full name as the filename
+      a.download = `${fullName}.jpg`; // Ensure the file name ends with .jpg
       a.click();
-    });
+    }, 'image/jpeg'); // Ensure the mime type is 'image/jpeg' for JPG images
   } else {
     alert("Please upload and crop an image first.");
   }
